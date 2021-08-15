@@ -1,0 +1,21 @@
+{
+    "name": "lengnuan/yii2-message",
+    "description": "yii2 message",
+    "type": "yii2-extension",
+    "keywords": ["yii2","message"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lengnuan",
+            "email": "25314666@qq.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "lengnuan\\message\\": "./src"
+        }
+    }
+}
