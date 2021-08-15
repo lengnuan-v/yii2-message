@@ -16,7 +16,7 @@ Either run
 or add
 
 ```
-"lengnuan/yii2-message": "*"
+"lengnuan-v/yii2-message": "*"
 ```
 
 to the require section of your `composer.json` file.
