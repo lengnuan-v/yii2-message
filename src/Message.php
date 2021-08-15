@@ -119,10 +119,10 @@ class Message extends Component
      * @param array $orderBy
      * @return array
      */
-    public function messageList($userId, $cate = 'to', $page = 1, $limit = 20, $orderBy = ['id' => SORT_DESC])
+    public function messageList($userId, $status = null, $cate = 'to', $page = 1, $limit = 20, $orderBy = ['id' => SORT_DESC])
     {
         $model = $this->findModel();
-        $query = $model->query(['and', [$cate => $userId], ['<', 'status', $model::$status['DELETED']], ['reply_id' => 0]]);
+        $query = $model->query(['and', [$cate => $userId], ['status' => $status == null ? 0 : $status], ['reply_id' => 0]]);
         $list  = $query->orderBy($orderBy)->offset(($page - 1) * $limit)->limit($limit)->asArray()->All();
         foreach ($list as &$val) {
             $val['from_name'] = $this->getUsername($val['from']);
