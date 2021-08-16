@@ -57,7 +57,7 @@ Yii::$app->message->reply($messageId = 2100, $message = 'Fine, and u?');
 Yii::$app->message->getMessage($messageId = 2100);
 
 // 获取列表
-Yii::$app->message->messageList($userId = 12, $cate = 'to', $page = 1, $limit = 20, $orderBy = ['id' => SORT_DESC]);
+Yii::$app->message->messageList($userId = 12, $status = null, $cate = 'to', $page = 1, $limit = 20, $orderBy = ['id' => SORT_DESC]);
 
 // 获取对话中的消息列表
 Yii::$app->message->getMessage($dialogueHash = '4795342d74935999cc82ded1b589072c');
